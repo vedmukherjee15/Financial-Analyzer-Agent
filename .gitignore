@@ -1,0 +1,19 @@
+.env
+.env.*
+__pycache__/
+*.pyc
+.DS_Store
+
+# Local MCP and OAuth secrets
+scripts/mcp_config.json
+token.json
+*.token.json
+*.keys.json
+
+# Virtualenvs
+.venv/
+venv/
+
+# Local notebooks and temp files
+.ipynb_checkpoints/
+*.log
