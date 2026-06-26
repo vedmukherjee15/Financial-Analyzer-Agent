@@ -123,25 +123,6 @@ python analysis_Agent.py
 - [scripts/utils.py](./scripts/utils.py): MCP config loading utilities
 - [scripts/prompts.py](./scripts/prompts.py): system prompt for the sheet agent
 
-## Known Limitations
 
-- Raw sheet write operations are currently disabled
-- The agent relies on external MCP tools, so missing credentials or tool startup failures will break execution
-- The current prompt and tool setup are optimized for experimentation rather than hardened production workflows
-- Spreadsheet read/write validation is still model-driven in some paths and should be replaced with code-level safeguards for production use
 
-## Suggested Next Improvements
 
-- Add a safe wrapper tool for sheet writes that computes ranges in code
-- Add structured logging for MCP tool calls
-- Add retry and fallback behavior for common Google Sheets API errors
-- Add tests for sheet name normalization and range generation
-- Move hardcoded model and tool configuration into environment-driven settings
-
-## Security Notes
-
-- Do not commit `.env`
-- Do not commit real OAuth tokens or credential files
-- Do not commit a local `scripts/mcp_config.json` containing personal absolute paths
-
-Use the included `.gitignore` and `mcp_config.example.json` as the repo-safe defaults.
